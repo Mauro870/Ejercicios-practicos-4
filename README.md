@@ -1,11 +1,13 @@
 # Ejercicios-practicos-4
 
-E1. Dados 3 enteros X, Y, Z que representan las dimensiones de un tetraedro. Y dado un número N. Imprima todas las posibles coordenadas dadas por (i,j,k) en una cuadricula tridimensional donde la suma de i+j+k no es igual a N. De modo que: 0 ≤ i ≤ X; 0 ≤ j ≤ Y; 0 ≤ k ≤ Z
+E1.Implemente la convolución unidimensional entre los siguientes polinomios:
 
-E2. Dado un string que contiene números enteros separados por espacio. Determine los números de la lista que son números “palíndromos”
+P(x) = 2x^3+3x^2+6x+7 y h(x) = x+2
 
-E3. Dada la siguiente lista de strings cuente cuántas veces se repite la palabra “Python” en toda la lista.
+Tips:
+• Para desplazar el polinomio h sobre el polinomio P puede usar la función shift de la librería scipy.ndimage.interpolation
+• Para reflejar el polinomio h puede utilizar la función flip
 
-leesta = [“We are learning Python”, “Functional programming in Python”, “What are this Python functions for?”, “Do we really need Python?”, “Python rulez!”]
+E2. Haga un sencillo filtrado (detección de bordes) a la imagen lenna.png utilizando el kernel Sobel y la convolución en dos dimensiones. Kernel Sobel horizontal: sobel_h = [[-1,-2,-1],[0,0,0],[1,2,1]] Kernel Sobel vertical: sobel_v = [[-1,0,1],[-2,0,2],[-1,0,1]] • Para poder trabajar con la imagen debe bajarla a escala de grises eliminando la última componente de la matriz de la imagen. • Para cargar la imagen puede utilizar la función pylab.imread('lenna.png’) • Para mostrar una imagen puede utilizar la función pylab.imshow(arreglo_imagen, cmap=pyl.cm.gray)
 
-E4. ¿Cuál es la suma de los primeros 50 números positivos cuyo cuadrado es divisible por 5?
+E3.En el siguiente enlace: https://nptel.ac.in/courses/111107062/module3/lecture1/lecture1.pdf se describe un algoritmo que sirve para calcular el valor propio (eigenvalue) dominante de una matriz cuadrada de dimensión 3, utilice la librería numpy para implementar ese algoritmo en Python. Utilizando su función encuentre el valor propio de la matriz:
